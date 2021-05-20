@@ -1,0 +1,21 @@
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
+
+* {
+  outline: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+body {
+  background-color: #eff6ff;
+}
+
+input[type='text'] {
+  border-bottom: 2px solid #a9afb9;
+}
+
+input[type='text']:focus {
+  border-bottom: 2px solid #6b7280;
+}
