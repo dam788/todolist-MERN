@@ -23,11 +23,10 @@ const postTodo = async (req, res) => {
 };
 
 const updateTodo = async (req, res) => {
-  console.log(req.params, 'back');
   try {
     const updateTodo = await Todo.updateOne(
       { _id: req.params.id },
-      { $set: { complete: true } }
+      { $set: { ...req.body } }
     );
     res.json(updateTodo);
   } catch (err) {
@@ -44,4 +43,11 @@ const deleteTodo = async (req, res) => {
   }
 };
 
-export { getTodos, postTodo, updateTodo, deleteTodo };
+const deleteFalse = async (req, res) => {
+  try {
+    const removeFalse = await Todo.deleteMany({ complete: true });
+    res.json(removeFalse);
+  } catch (error) {}
+};
+
+export { getTodos, postTodo, updateTodo, deleteTodo, deleteFalse };

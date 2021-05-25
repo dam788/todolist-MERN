@@ -9,7 +9,8 @@ button:focus {
 }
 
 body {
-  background-color: #e5e7eb;
+  background: linear-gradient(180deg, #e5e7eb 70%, #a9afb9 120%);
+  background-attachment: fixed;
 }
 
 input[type='text'] {
